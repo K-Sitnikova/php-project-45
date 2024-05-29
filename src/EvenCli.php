@@ -5,7 +5,7 @@ namespace BrainGames\Src\EvenCli;
 use function cli\line;
 use function cli\prompt;
 
-function startEvenGame()
+function startEvenGame(): void
 {
     $rounds = 3;
     line('Welcome to the Brain Game!');
