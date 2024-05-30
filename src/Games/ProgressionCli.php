@@ -8,10 +8,9 @@ use function cli\prompt;
 function createProgression($length, $step): array
 {
     $result = [];
-    $current = 0;
+    $current = $step;
     for ($i = 0; $i < $length; $i++) {
-        $result[] = $step + $current;
-        $current = $result[$i];
+        $result[] = $current * $i + $step;
     }
 
     return $result;
