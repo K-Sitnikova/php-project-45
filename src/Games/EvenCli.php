@@ -20,7 +20,7 @@ function evenGame(string $name, int $rounds, string $exercise): void
     while ($rounds >= 1) {
         $randomNum = rand(1, 50);
         $isEven = $randomNum % 2 === 0;
-        $question = prompt("Question: ${randomNum}");
+        $question = prompt("Question: {$randomNum}");
         if ($question === 'yes') {
             if ($isEven) {
                 line('Correct!');

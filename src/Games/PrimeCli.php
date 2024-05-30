@@ -48,7 +48,7 @@ function primeGame(string $name, int $rounds, string $exercise): void
                 line('Correct!');
             }
         } else {
-            line("${question} is wrong answer ;(. Correct answer was {$answer}");
+            line("{$question} is wrong answer ;(. Correct answer was {$answer}");
             line("Let's try again, %s!", $name);
             break;
         }
