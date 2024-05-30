@@ -32,7 +32,7 @@ function gameGcd($name, $rounds, $exercise): void
     while ($rounds >= 1) {
         $firstRandomNum = rand(1, 20);
         $secondRandomNum = rand(1, 20);
-        $question = prompt("Question: {$firstRandomNum} and {$secondRandomNum}");
+        $question = prompt("Question: {$firstRandomNum} {$secondRandomNum}");
         $answer = findGcd($firstRandomNum, $secondRandomNum);
         if ($question == $answer) {
             line('Correct!');
