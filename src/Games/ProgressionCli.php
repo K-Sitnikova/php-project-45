@@ -33,8 +33,8 @@ function progressionGame($name, $rounds, $exercise): void
         $randomHideIndex = rand(0, $randomLength - 1);
         $progression = createProgression($randomLength, $randomStep);
         $answer = $progression[$randomHideIndex];
-        $progression[$randomHideIndex] = '..';
-        $stringOfProgression = implode(',', $progression);
+        $progression[$randomHideIndex] = "..";
+        $stringOfProgression = implode(' ', $progression);
         $question = prompt("Question: {$stringOfProgression}");
         if ($question == $answer) {
             line('Correct!');
