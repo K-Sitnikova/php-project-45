@@ -21,7 +21,7 @@ function startPrimeCli(): void
 {
     $name = startGame();
     $rounds = 3;
-    $exercise = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $exercise = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     primeGame($name, $rounds, $exercise);
 }
 function primeGame($name, $rounds, $exercise): void
