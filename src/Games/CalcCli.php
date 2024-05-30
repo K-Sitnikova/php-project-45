@@ -29,12 +29,14 @@ function calcGame(string $name, int $rounds, string $exercise): void
             '+' => $result =  $firstRandom + $secondRandom,
             default => $result =  $firstRandom * $secondRandom,
         };
-        if (isset($result) && $question == $result) {
-            line('Correct!');
-        } else {
-            line(" {$question} is wrong answer ;(. Correct answer was, {$result}");
-            line("Let's try again, %s!", $name);
-            break;
+        if (isset($result)) {
+            if ($question == $result) {
+                line('Correct!');
+            } else {
+                line(" {$question} is wrong answer ;(. Correct answer was, {$result}");
+                line("Let's try again, %s!", $name);
+                break;
+            }
         }
         $rounds--;
     }
