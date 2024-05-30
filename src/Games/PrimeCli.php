@@ -6,7 +6,7 @@ use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
-function checkPrime($num): bool
+function checkPrime(int $num): bool
 {
     $length = $num;
     for ($i = 1; $i <= $length; $i++) {
@@ -24,7 +24,7 @@ function startPrimeCli(): void
     $exercise = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     primeGame($name, $rounds, $exercise);
 }
-function primeGame($name, $rounds, $exercise): void
+function primeGame(string $name, int $rounds, string $exercise): void
 {
     line($exercise);
     while ($rounds >= 1) {

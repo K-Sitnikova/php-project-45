@@ -6,7 +6,7 @@ use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
-function createProgression($length, $step): array
+function createProgression(int $length, int $step): array
 {
     $result = [];
     $current = $step;
@@ -24,7 +24,7 @@ function startProgressionCli(): void
     $exercise = 'What number is missing in the progression?';
     progressionGame($name, $rounds, $exercise);
 }
-function progressionGame($name, $rounds, $exercise): void
+function progressionGame(string $name, int $rounds, string $exercise): void
 {
     line($exercise);
     while ($rounds >= 1) {

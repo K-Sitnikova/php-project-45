@@ -6,7 +6,7 @@ use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
-function findGcd($num1, $num2)
+function findGcd(int $num1, int $num2)
 {
     while ($num1 !== 0 && $num2 !== 0) {
         if ($num1 > $num2) {
@@ -26,7 +26,7 @@ function startGcdCli(): void
     gameGcd($name, $rounds, $exercise);
 }
 
-function gameGcd($name, $rounds, $exercise): void
+function gameGcd(string $name, int $rounds, string $exercise): void
 {
     line($exercise);
     while ($rounds >= 1) {

@@ -14,7 +14,7 @@ function startEvenCli(): void
     evenGame($name, $rounds, $exercise);
 }
 
-function evenGame($name, $rounds, $exercise): void
+function evenGame(string $name, int $rounds, string $exercise): void
 {
     line($exercise);
     while ($rounds >= 1) {

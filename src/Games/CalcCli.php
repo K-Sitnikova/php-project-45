@@ -14,7 +14,7 @@ function startCalcCli(): void
     calcGame($name, $rounds, $exercise);
 }
 
-function calcGame($name, $rounds, $exercise): void
+function calcGame(string $name, int $rounds, string $exercise): void
 {
     line($exercise);
     $operations = array('+', '-', '*');
@@ -29,7 +29,7 @@ function calcGame($name, $rounds, $exercise): void
             '+' => $result =  $firstRandom + $secondRandom,
             default => $result =  $firstRandom * $secondRandom,
         };
-        if ($question == $result) {
+        if ($result && $question == $result) {
             line('Correct!');
         } else {
             line(" {$question} is wrong answer ;(. Correct answer was, {$result}");
