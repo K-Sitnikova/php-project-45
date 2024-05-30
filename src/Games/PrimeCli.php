@@ -35,13 +35,13 @@ function primeGame(string $name, int $rounds, string $exercise): void
             if ($answer) {
                 line('Correct!');
             } else {
-                line("${question} is wrong answer ;(. Correct answer was false");
+                line('"yes" is wrong answer ;(. Correct answer was "false"');
                 line("Let's try again, %s!", $name);
                 break;
             }
         } elseif ($question === 'no') {
             if ($answer) {
-                line("${question} is wrong answer ;(. Correct answer was true");
+                line('"no" is wrong answer ;(. Correct answer was "yes"');
                 line("Let's try again, %s!", $name);
                 break;
             } else {
