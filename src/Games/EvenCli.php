@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Src\EvenCli;
+namespace BrainGames\Src\Games\EvenCli;
 
 use function cli\line;
 use function cli\prompt;

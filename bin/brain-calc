@@ -2,8 +2,8 @@
 
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once(__DIR__ . '/../src/CalcCli.php');
+require_once(__DIR__ . '/../src/Games/CalcCli.php');
 
-use function BrainGames\Src\CalcCli\calcGame;
+use function BrainGames\Src\Games\CalcCli\calcGame;
 
 calcGame();

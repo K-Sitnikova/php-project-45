@@ -2,9 +2,9 @@
 
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once(__DIR__ . '/../src/EvenCli.php');
+require_once(__DIR__ . '/../src/Games/EvenCli.php');
 
-use function BrainGames\Src\EvenCli\startEvenGame;
+use function BrainGames\Src\Games\EvenCli\startEvenGame;
 
 startEvenGame();
 
