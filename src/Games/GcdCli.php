@@ -18,11 +18,17 @@ function findGcd($num1, $num2)
     return $num1 + $num2;
 }
 
-function gameGcd(): void
+function startGcdCli(): void
 {
-    $rounds = 3;
     $name = startGame();
-    line('Find the greatest common divisor of given numbers.');
+    $rounds = 3;
+    $exercise = 'Find the greatest common divisor of given numbers.';
+    gameGcd($name, $rounds, $exercise);
+}
+
+function gameGcd($name, $rounds, $exercise): void
+{
+    line($exercise);
     while ($rounds >= 1) {
         $firstRandomNum = rand(1, 20);
         $secondRandomNum = rand(1, 20);

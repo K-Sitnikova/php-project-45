@@ -16,11 +16,17 @@ function createProgression($length, $step): array
 
     return $result;
 }
-function progressionGame(): void
+
+function startProgressionCli(): void
 {
-    $rounds = 3;
     $name = startGame();
-    line('What number is missing in the progression?');
+    $rounds = 3;
+    $exercise = 'What number is missing in the progression?';
+    progressionGame($name, $rounds, $exercise);
+}
+function progressionGame($name, $rounds, $exercise): void
+{
+    line($exercise);
     while ($rounds >= 1) {
         $randomLength = rand(5, 10);
         $randomStep = rand(1, 9);

@@ -3,6 +3,6 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Src\Games\ProgressionCli\ProgressionGame;
+use function BrainGames\Src\Games\ProgressionCli\startProgressionCli;
 
-ProgressionGame();
+startProgressionCli();

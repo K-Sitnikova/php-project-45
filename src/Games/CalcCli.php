@@ -6,11 +6,17 @@ use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
-function calcGame(): void
+function startCalcCli(): void
 {
-    $rounds = 3;
     $name = startGame();
-    line("What is the result of the expression?");
+    $rounds = 3;
+    $exercise = "What is the result of the expression?";
+    calcGame($name, $rounds, $exercise);
+}
+
+function calcGame($name, $rounds, $exercise): void
+{
+    line($exercise);
     $operations = array('+', '-', '*');
     while ($rounds >= 1) {
         $firstRandom = rand(0, 40);

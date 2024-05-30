@@ -16,11 +16,17 @@ function checkPrime($num): bool
     }
     return true;
 }
-function primeGame()
+
+function startPrimeCli(): void
 {
-    $rounds = 3;
     $name = startGame();
-    line('Answer "yes" if given number is prime. Otherwise answer "no".');
+    $rounds = 3;
+    $exercise = 'Answer "yes" if the number is even, otherwise answer "no".';
+    primeGame($name, $rounds, $exercise);
+}
+function primeGame($name, $rounds, $exercise): void
+{
+    line($exercise);
     while ($rounds >= 1) {
         $randomNum = rand(1, 27);
         $answer = checkPrime($randomNum);
