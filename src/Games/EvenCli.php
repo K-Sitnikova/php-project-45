@@ -2,15 +2,14 @@
 
 namespace BrainGames\Src\Games\EvenCli;
 
+use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
 function startEvenGame(): void
 {
     $rounds = 3;
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = startGame();
     line('Answer "yes" if the number is even, otherwise answer "no".');
     while ($rounds >= 1) {
         $randomNum = rand(1, 50);

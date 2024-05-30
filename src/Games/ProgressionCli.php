@@ -2,6 +2,7 @@
 
 namespace BrainGames\Src\Games\ProgressionCli;
 
+use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
@@ -18,9 +19,7 @@ function createProgression($length, $step): array
 function progressionGame(): void
 {
     $rounds = 3;
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = startGame();
     line('What number is missing in the progression?');
     while ($rounds >= 1) {
         $randomLength = rand(5, 10);

@@ -2,15 +2,14 @@
 
 namespace BrainGames\Src\Games\CalcCli;
 
+use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
 function calcGame(): void
 {
     $rounds = 3;
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = startGame();
     line("What is the result of the expression?");
     $operations = array('+', '-', '*');
     while ($rounds >= 1) {

@@ -2,6 +2,7 @@
 
 namespace BrainGames\Src\Games\GcdCli;
 
+use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
@@ -16,12 +17,11 @@ function findGcd($num1, $num2)
     }
     return $num1 + $num2;
 }
+
 function gameGcd(): void
 {
     $rounds = 3;
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = startGame();
     line('Find the greatest common divisor of given numbers.');
     while ($rounds >= 1) {
         $firstRandomNum = rand(1, 20);

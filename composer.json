@@ -5,7 +5,15 @@
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": [
+            "src/Cli.php",
+            "src/Games/PrimeCli.php",
+            "src/Games/ProgressionCli.php",
+            "src/Games/GcdCli.php",
+            "src/Games/CalcCli.php",
+            "src/Games/EvenCli.php"
+        ]
     },
     "authors": [
         {

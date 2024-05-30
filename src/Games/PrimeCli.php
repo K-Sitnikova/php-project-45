@@ -2,6 +2,7 @@
 
 namespace BrainGames\Src\Games\PrimeCli;
 
+use function BrainGames\Src\Cli\startGame;
 use function cli\line;
 use function cli\prompt;
 
@@ -18,9 +19,7 @@ function checkPrime($num): bool
 function primeGame()
 {
     $rounds = 3;
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = startGame();
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
     while ($rounds >= 1) {
         $randomNum = rand(1, 27);
@@ -30,13 +29,13 @@ function primeGame()
             if ($answer) {
                 line('Correct!');
             } else {
-                line("${question} is wrong answer ;(. Correct answer was {$answer}");
+                line("${question} is wrong answer ;(. Correct answer was false");
                 line("Let's try again, %s!", $name);
                 break;
             }
         } elseif ($question === 'no') {
             if ($answer) {
-                line("${question} is wrong answer ;(. Correct answer was {$answer}");
+                line("${question} is wrong answer ;(. Correct answer was true");
                 line("Let's try again, %s!", $name);
                 break;
             } else {
